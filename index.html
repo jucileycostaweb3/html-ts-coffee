@@ -1,21 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy me a coffee</title>    
+    <title>Buy me a coffee</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Buy me a coffee</h1>
-    <button id="connectButton">Connect</button>
-    <button id="balanceButton">Get Balance</button>
-    <!-- Form "buy coffee" or "fund"-->
-    <label for="ethAmount">ETH Amount </label>
-    <input id="ethAmount" placeholder="0.1" />
-    <button type="button" id="fundButton">Buy Coffee</button>
+    <div class="container">
+        <div class="coffee-icon">☕</div>
+        <h1>Buy me a coffee</h1>
+        
+        <div class="buttons-container">
+            <button id="connectButton">Connect Wallet</button>
+            <button id="balanceButton">Get Balance</button>
+            <button id="withdrawButton">Withdraw</button>
+        </div>
+        
+        <div class="coffee-form">
+            <div class="form-group">
+                <label for="ethAmount">ETH Amount:</label>
+                <input id="ethAmount" placeholder="0.1" />
+            </div>
+            <button type="button" id="fundButton">Buy Coffee</button>
+        </div>
+        
+        <div class="footer">
+            Support this project with a coffee using Ethereum!
+        </div>
+    </div>
+    
+    <script src="./index-js.js" type="module"></script>
 </body>
-
-<script src="./index-js.js" type="module"></script>
-
 </html>
