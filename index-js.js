@@ -95,7 +95,7 @@ async function withdraw() {
       const [connectedAccount] = await walletClient.requestAddresses();
       const currentChain = await getCurrentChain(walletClient);
 
-      console.log("Processing withdrawal...");
+      console.log("Processing withdraw...");
       publicClient = createPublicClient({
         transport: custom(window.ethereum),
       });
@@ -109,11 +109,11 @@ async function withdraw() {
       });
 
       const hash = await walletClient.writeContract(request);
-      console.log(`Withdrawal transaction hash: ${hash}`);
-      alert("Withdrawal successful!");
+      console.log(`Withdraw transaction hash: ${hash}`);
+      alert("Withdraw successful!");
     } catch (error) {
       console.log(error);
-      alert("Withdrawal failed: " + error.message);
+      alert("Withdraw failed: " + error.message);
     }
   }
 }
